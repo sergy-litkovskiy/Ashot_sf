@@ -1,0 +1,37 @@
+version: '3'
+services:
+  apache:
+    build: ./docker/apache
+    container_name: sf4_apache
+    working_dir: /application
+    ports:
+      - 5002:80
+    volumes:
+      - ./docker/config/vhosts:/etc/apache2/sites-enabled
+      - .:/application
+    depends_on:
+      - php
+
+  mysql:
+    image: mysql
+    command: "--default-authentication-plugin=mysql_native_password"
+    container_name: sf4_mysql
+    working_dir: /application
+    volumes:
+      - ./docker/mysql/data/db:/var/lib/mysql
+      - ./docker/mysql/my.cnf:/etc/my.cnf
+      - .:/application
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ashot
+      MYSQL_USER: ashot
+      MYSQL_PASSWORD: root
+
+  php:
+    build: ./docker/php
+    container_name: sf4_php
+    working_dir: /application
+    volumes:
+      - .:/application
+    depends_on:
+      - mysql

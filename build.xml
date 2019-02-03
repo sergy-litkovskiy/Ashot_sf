@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="tra-tracking" basedir="." default="default">
+
+    <!-- ============ properties ==================== -->
+    <property name="basedir" value="${project.basedir}"/>
+
+    <!-- ============================================ -->
+    <!-- Target: default                              -->
+    <!-- ============================================ -->
+    <target name="default" description="The default target used when no arguments have been passed">
+        <exec executable="phing" outputProperty="phing_targets">
+            <arg value="-f" />
+            <arg value="${phing.file}" />
+            <arg value="-l" />
+        </exec>
+        <echo>Please select a target.</echo>
+        <echo>${phing_targets}</echo>
+    </target>
+
+    <!-- ============================================ -->
+    <!-- Target: clear_cache                          -->
+    <!-- ============================================ -->
+    <target name="clear_cache" description="Clear cache for ALL (prod, dev, test) env" depends="
+        clear_cache_dev,
+        clear_cache_prod,
+        clear_cache_test
+    "/>
+
+    <!-- ============================================ -->
+    <!-- Target: clear_cache_dev                      -->
+    <!-- ============================================ -->
+    <target name="clear_cache_dev" description="Clear cache for 'dev' env">
+        <phingcall target="_clear_cache">
+            <property name="env" value="dev"/>
+        </phingcall>
+    </target>
+
+    <!-- ============================================ -->
+    <!-- Target: clear_cache_prod                     -->
+    <!-- ============================================ -->
+    <target name="clear_cache_prod" description="Clear cache for 'prod' env">
+        <phingcall target="_clear_cache">
+            <property name="env" value="prod"/>
+        </phingcall>
+    </target>
+
+    <!-- ============================================ -->
+    <!-- Target: clear_cache_test                     -->
+    <!-- ============================================ -->
+    <target name="clear_cache_test" description="Clear cache for 'test' env">
+        <phingcall target="_clear_cache">
+            <property name="env" value="test"/>
+        </phingcall>
+    </target>
+
+    <!-- ============================================ -->
+    <!-- Target: _clear_cache (hidden)                -->
+    <!-- ============================================ -->
+    <target name="_clear_cache" description="Clear cache for '$env'" hidden="true">
+        <echo msg="Clearing cache for '${env}' env..."/>
+        <exec executable="php">
+            <arg value="${basedir}/bin/console" />
+            <arg value="cache:clear" />
+            <arg value="--env=${env}" />
+            <arg value="--no-warmup" />
+            <arg value="--no-debug" />
+        </exec>
+    </target>
+
+    <!-- ============================================ -->
+    <!-- Target: run_code_check                       -->
+    <!-- ============================================ -->
+    <target name="run_code_check" description="Run all checks (phpstan, tests, phpcs, phpmd)" depends="
+        run_phpstan,
+        run_tests,
+        run_phpcs,
+        run_phpmd
+    "/>
+
+    <!-- ============================================ -->
+    <!-- Target: run_tests                            -->
+    <!-- ============================================ -->
+    <target name="run_tests" description="Run all existing tests">
+        <exec executable="${basedir}/vendor/bin/simple-phpunit" checkreturn="true" />
+    </target>
+
+    <!-- ============================================ -->
+    <!-- Target: run_phpcs                            -->
+    <!-- ============================================ -->
+    <target name="run_phpcs" description="Run PHP code sniffer (coding standards)">
+        <exec executable="${basedir}/vendor/bin/phpcs" checkreturn="true">
+            <arg value="--standard=PSR1,PSR2" />
+            <arg value="${basedir}/src/" />
+        </exec>
+    </target>
+
+    <!-- ============================================ -->
+    <!-- Target: run_phpmd                            -->
+    <!-- ============================================ -->
+    <target name="run_phpmd" description="Run PHP mess detector">
+        <exec executable="${basedir}/vendor/bin/phpmd" checkreturn="true">
+            <arg value="${basedir}/src/" />
+            <arg value="text" />
+            <arg value="controversial,design,unusedcode" />
+        </exec>
+    </target>
+
+    <!-- ============================================ -->
+    <!-- Target: run_phpstan                          -->
+    <!-- ============================================ -->
+    <target name="run_phpstan" description="Run PHPstan">
+        <exec executable="${basedir}/vendor/bin/phpstan" checkreturn="true">
+            <arg value="analyse" />
+            <arg value="--level=1" />
+            <arg value="--memory-limit=100M" />
+            <arg value="${basedir}/src/" />
+        </exec>
+    </target>
+
+</project>

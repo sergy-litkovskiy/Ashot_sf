@@ -4,6 +4,9 @@
 
 {% block body %}
     <article class="span12 data-block">
-        {{ data.about }}
+        {% for item in data %}
+            <p>{{ item.name }}</p>
+            <p>{{ item.source }}</p>
+        {% endfor %}
     </article>
 {% endblock %}

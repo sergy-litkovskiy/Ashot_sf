@@ -18,6 +18,6 @@ class IndexController extends AbstractController
     {
         $links = $aboutService->getAboutData();
 
-        return $this->render('Index/index.twig', ['data' => ['about' => 'about person text']]);
+        return $this->render('Index/index.twig', ['data' => $links]);
     }
 }

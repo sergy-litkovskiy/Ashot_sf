@@ -10,6 +10,7 @@ class AboutRepository extends AbstractRepository
     {
         $qb = $this->connection->createQueryBuilder();
         $qb
+            ->select('*')
             ->from('about_links', 'al');
 
         /** @var Statement $statement */

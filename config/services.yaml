@@ -39,4 +39,4 @@ services:
 
     App\Service\AboutService:
         arguments:
-            $repository: App\Repository\AboutRepository
+            $repository: '@App\Repository\AboutRepository'

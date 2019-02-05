@@ -4,7 +4,6 @@ parameters:
     # environment variables are not available yet.
     # You should not need to change this value.
     env(DATABASE_URL): ''
-
 doctrine:
     dbal:
         # configure these for your database server
@@ -15,7 +14,12 @@ doctrine:
             charset: utf8mb4
             collate: utf8mb4_unicode_ci
 
-        url: '%env(resolve:DATABASE_URL)%'
+        url: '%env(DATABASE_URL)%'
+        host: '%env(DATABASE_HOST)%'
+        user: '%env(DATABASE_USER)%'
+        password: '%env(DATABASE_PWD)%'
+        dbname: '%env(DATABASE_NAME)%'
+        port: '%env(DATABASE_PORT)%'
     orm:
         auto_generate_proxy_classes: true
         naming_strategy: doctrine.orm.naming_strategy.underscore

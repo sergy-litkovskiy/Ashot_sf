@@ -24,7 +24,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: ashot
-      MYSQL_USER: ashot
+      MYSQL_USER: root
       MYSQL_PASSWORD: root
 
   php:

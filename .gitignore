@@ -5,6 +5,8 @@
 /public/bundles/
 /var/
 /vendor/
+/docker/mysql/data/
+/.idea/
 ###< symfony/framework-bundle ###
 
 ###> symfony/phpunit-bridge ###

@@ -30,6 +30,9 @@ RUN	echo "deb https://deb.nodesource.com/node_6.x jessie main" >> /etc/apt/sourc
 	apt-get install -y --force-yes nodejs && \
 	rm -f /etc/apt/sources.list.d/nodejs.list
 
+RUN composer require encore
+RUN npm install @symfony/webpack-encore --save-dev
+
 RUN groupadd dev -g 999
 RUN useradd dev -g dev -d /home/dev -m
 RUN passwd -d dev

@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Service\AboutService;
+use App\Service\AboutLinksService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -11,12 +11,12 @@ class IndexController extends AbstractController
 {
     /**
      * @param Request      $request
-     * @param AboutService $aboutService
+     * @param AboutLinksService $aboutLinksService
      * @return Response
      */
-    public function indexAction(Request $request, AboutService $aboutService): Response
+    public function indexAction(Request $request, AboutLinksService $aboutLinksService): Response
     {
-        $links = $aboutService->getAboutData();
+        $links = $aboutLinksService->getAboutLinks();
 
         return $this->render('Index/index.twig', ['data' => $links]);
     }

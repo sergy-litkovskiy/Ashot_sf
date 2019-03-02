@@ -8,10 +8,15 @@ services:
       - 5003:80
     volumes:
       - ./docker/config/vhosts:/etc/apache2/sites-enabled
+      - ./docker/php/opcache.ini:/etc/apache2/mods-available/opcache.ini
+      - ./docker/php/xdebug.ini:/etc/apache2/mods-available/xdebug.ini
+      - ./docker/php/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
       - .:/application
     depends_on:
       - php
-
+    environment:
+      PHP_XDEBUG_ENABLED: 1
+      XDEBUG_CONFIG: remote_host=docker.for.mac.host.internal
   mysql:
     image: mysql
     command: "--default-authentication-plugin=mysql_native_password"
@@ -33,5 +38,10 @@ services:
     working_dir: /application
     volumes:
       - .:/application
+      - ./docker/php/xdebug.ini:/etc/apache2/mods-available/xdebug.ini
+      - ./docker/php/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
     depends_on:
       - mysql
+    environment:
+      PHP_XDEBUG_ENABLED: 1
+      XDEBUG_CONFIG: remote_host=docker.for.mac.host.internal

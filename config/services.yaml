@@ -33,10 +33,10 @@ services:
 #        arguments:
 #            $connection: '@doctrine.dbal.connection'
 
-    App\Repository\AboutRepository:
-        autowire: true
-        autoconfigure: false
+#    App\Repository\AboutLinksRepository:
+#        autowire: true
+#        autoconfigure: false
 
-    App\Service\AboutService:
-        arguments:
-            $repository: '@App\Repository\AboutRepository'
+#    App\Service\AboutService:
+#        arguments:
+#            $repository: '@App\Repository\AboutRepository'

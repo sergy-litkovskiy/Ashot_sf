@@ -7,13 +7,13 @@ class Category
     /** @var int */
     private $id;
     /** @var string */
-    private $catName;
+    private $cat_name;
     /** @var string */
-    private $partName;
+    private $part_name;
     /** @var string */
-    private $textShort;
+    private $text_short;
     /** @var string */
-    private $textLong;
+    private $text_long;
 
     /**
      * @return int
@@ -39,7 +39,7 @@ class Category
      */
     public function getCatName(): string
     {
-        return $this->catName;
+        return $this->cat_name;
     }
 
     /**
@@ -48,7 +48,7 @@ class Category
      */
     public function setCatName(string $catName): self
     {
-        $this->catName = $catName;
+        $this->cat_name = $catName;
 
         return $this;
     }
@@ -58,7 +58,7 @@ class Category
      */
     public function getPartName(): string
     {
-        return $this->partName;
+        return $this->part_name;
     }
 
     /**
@@ -67,7 +67,7 @@ class Category
      */
     public function setPartName(string $partName): self
     {
-        $this->partName = $partName;
+        $this->part_name = $partName;
 
         return $this;
     }
@@ -77,7 +77,7 @@ class Category
      */
     public function getTextShort(): string
     {
-        return $this->textShort;
+        return $this->text_short;
     }
 
     /**
@@ -86,7 +86,7 @@ class Category
      */
     public function setTextShort(string $textShort): self
     {
-        $this->textShort = $textShort;
+        $this->text_short = $textShort;
 
         return $this;
     }
@@ -96,7 +96,7 @@ class Category
      */
     public function getTextLong(): string
     {
-        return $this->textLong;
+        return $this->text_long;
     }
 
     /**
@@ -105,7 +105,7 @@ class Category
      */
     public function setTextLong(string $textLong): self
     {
-        $this->textLong = $textLong;
+        $this->text_long = $textLong;
 
         return $this;
     }

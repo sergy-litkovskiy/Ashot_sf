@@ -17,8 +17,6 @@ class AboutLinksRepository extends AbstractRepository
         /** @var Statement $statement */
         $statement = $qb->execute();
 
-        $result = $statement->fetchAll(\Doctrine\DBAL\FetchMode::CUSTOM_OBJECT, "App\Entity\AboutLinks");
-
-        return $result;
+        return $statement->fetchAll(\Doctrine\DBAL\FetchMode::CUSTOM_OBJECT, 'App\Entity\AboutLinks');
     }
 }

@@ -2,7 +2,8 @@
   "build/app.css": "/build/app.css",
   "build/app.js": "/build/app.js",
   "build/runtime.js": "/build/runtime.js",
-  "build/images/about-bg.jpg": "/build/images/about-bg.2ed6d556.jpg",
+  "build/images/bg_main.png": "/build/images/bg_main.be445d11.png",
   "build/images/call-to-action-bg.jpg": "/build/images/call-to-action-bg.7a6c36e8.jpg",
-  "build/images/facts-bg.jpg": "/build/images/facts-bg.406774e6.jpg"
+  "build/images/facts-bg.jpg": "/build/images/facts-bg.406774e6.jpg",
+  "build/images/gerb.png": "/build/images/gerb.4e9297e8.png"
 }

@@ -1,2 +1,2 @@
 # Webpack - Buid app(.js|.css)
-npm run encore -- dev
+npm run encore --dev

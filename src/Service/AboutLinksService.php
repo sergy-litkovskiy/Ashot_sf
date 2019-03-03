@@ -21,7 +21,10 @@ class AboutLinksService
         $this->repository = $repository;
     }
 
-    public function getAboutLinks()
+    /**
+     * @return array
+     */
+    public function getAboutLinks(): array
     {
         return $this->repository->getAboutLinks();
     }

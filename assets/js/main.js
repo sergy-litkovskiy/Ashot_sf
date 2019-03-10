@@ -205,4 +205,13 @@ require('../css/style.css');
     items: 1
   });
 
+  $(document).on('click', '.collapse-text-down', function(e) {
+    $(this).parent().parent().find('#' + $(this).data('target-id')).show();
+    $(this).hide();
+  });
+
+  $(document).on('click', '.collapse-text-up', function(e) {
+    $('#' + $(this).data('target-id')).hide();
+    $(this).parent().parent().parent().find('.collapse-text-down').show();
+  });
 })(jQuery);

@@ -1,3 +1,19 @@
 index:
     path: /
-    controller: App\Controller\IndexController::indexAction
+    controller: App\Controller\IndexController::showAction
+
+painting_technique:
+    path: /painting/technique
+    controller: App\Controller\PaintingTechniqueController::showAction
+
+elite_gift:
+    path: /gift
+    controller: App\Controller\EliteGiftController::showAction
+
+restaurant:
+    path: /restaurant
+    controller: App\Controller\RestaurantController::showAction
+
+books:
+    path: /books
+    controller: App\Controller\BooksController::showAction

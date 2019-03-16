@@ -11,8 +11,6 @@ use Symfony\Component\HttpFoundation\Response;
 
 class IndexController extends AbstractController
 {
-    const CATEGORY_ABOUT_AUTHOR_ID = 15;
-
     /**
      * @param Request           $request
      * @param AboutLinksService $aboutLinksService
@@ -20,22 +18,22 @@ class IndexController extends AbstractController
      * @param ImageService      $imageService
      * @return Response
      */
-    public function indexAction(
+    public function showAction(
         Request $request,
         AboutLinksService $aboutLinksService,
         CategoryService $categoryService,
         ImageService $imageService
     ): Response {
-        $links = $aboutLinksService->getAboutLinks();
-        $aboutAuthorCategory = $categoryService->getCategoryById(self::CATEGORY_ABOUT_AUTHOR_ID);
-        $aboutAuthorImageList = $imageService->getImageListByCategoryId(self::CATEGORY_ABOUT_AUTHOR_ID);
+//        $links = $aboutLinksService->getAboutLinks();
+//        $aboutAuthorCategory = $categoryService->getCategoryById(self::CATEGORY_ABOUT_AUTHOR_ID);
+//        $aboutAuthorImageList = $imageService->getImageListByCategoryId(self::CATEGORY_ABOUT_AUTHOR_ID);
 
         return $this->render(
-            'Index/index.twig',
+            'Index/show.twig',
             [
-                'links'                => $links,
-                'aboutAuthorCategory'  => $aboutAuthorCategory,
-                'aboutAuthorImageList' => $aboutAuthorImageList,
+//                'links'                => $links,
+//                'aboutAuthorCategory'  => $aboutAuthorCategory,
+//                'aboutAuthorImageList' => $aboutAuthorImageList,
             ]
         );
     }

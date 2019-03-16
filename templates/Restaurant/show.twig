@@ -1,0 +1,348 @@
+{% extends "base.html.twig" %}
+
+{% block title "Restauratnt Napoleon" %}
+
+{% block header %}
+    {% set currentPage = 'restaurant' %}
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    <main id="main">
+        <section id="about">
+            <div class="container">
+                <header class="section-header">
+                    <h3>Ресторан Наполеон</h3>
+                    <div class="content">
+                        <p><img class="pull-left" src="/img/upload/1001.jpg" height="236" width="200">Всем известно, что театр начинается с вешалки. А ресторан? Полагаете со швейцара? Но здесь, увидев у входа настоящих гвардейцев Наполеона, блистающих великолепной выправкой и эполетами, вы поймете, что и в наше прозаическое время есть место чудесам. Мы на пороге сказочного мира, созданного фантазией художника Ашота Арутюняна - основателя и владельца ресторана НАПОЛЕОН.</p>
+                        <p><strong>Ресторан "Наполеон" </strong>был открыт в Киеве в 1993 году на ул. Шота Руставели, и пользовался большой популярностью у зарождающейся украинской буржуазии и культурной богемы. Ашот после визита в Америку, где его впечатлил ресторан одного рекламного агентства, решил сделать свой. Шикарный, как любимый император, этот ресторан впечатлял своим бархатно-мраморным великолепием. Удивительно воссоздана атмосфера великой эпохи. Путешествие во времени оказалось возможным. И вот вы во дворце Наполеона. Имперская роскошь интерьеров, алые камзолы гвардейцев. Перед входом в ресторан - искусственные деревья. Они были в 1993 году единственные в Киеве.  Народ,  проходя мимо, трогал и не верил, что зимой, в 20-ти градусный  мороз деревья  могут быть зелеными... Советский человек такого еще не  видел!</p>
+                        <p>К сожалению жизнь ресторана была недолгой - когда был период бандитского передела, «Наполеон» у Ашота, по его словам, забрали. И никто ничего не мог сделать – ни власть, ни милиция. А чтобы его труды не достались врагу, все содержимое ресторана хозяин раздал сотрудникам – кто что мог унести, а гранит и мрамор ушел на надгробные памятники. Себе Ашот оставил мини-музей Наполеона, в его доме нашли место медали, фарфор, сабли и огромный портрет императора, который он сам писал для ресторана. И теперь вы можете только виртуально посетить ресторан "Наполеон", просмотрев фотографии залов, увидеть шикарные камзолы персонала и императорские блюда, которые подавали в ресторане.</p>
+                        <div class="row restaurant-interior-img">
+                            <div class="col-lg-4 col-md-6 box wow">
+                                <p><img class="pull-left" src="/img/upload/napH.jpg"><strong>Зал Наполеон</strong> - жемчужина ресторана. Столик на четверых. Сочетание пурпурных и белых тонов, роскошь, величие, неизменные гвардейцы. Этот зал достоин императора. Здесь мог бы произойти прием послов или военный совет. Вот уже собираются приближенные. Еще минута - и мы услышим быстрые шаги великого корсиканца! Это ли не поступь империи?!</p>
+                            </div>
+                            <div class="col-lg-4 col-md-6 box wow">
+                                <p><img class="pull-left" src="/img/upload/rosy.jpg"><strong>Розовый зал Жозефина самый изящный</strong> со столиком на шесть человек. Интимная камерная атмосфера, создаваемая этим интерьером, сделает вечер незабываемым. Розовые перламутровые блики будут играть на лицах ваших спутниц. Может быть, каждая из них почувствует себя придворной дамой или даже самой... Вам нравятся царственные женщины?</p>
+                            </div>
+                            <div class="col-lg-4 col-md-6 box wow">
+                                <p><img class="pull-left" src="/img/upload/white.jpg"><strong>Белый зал</strong> рассчитан на 10-15 человек. Ужиная здесь, вы будете пытаться соответствовать этим сверкающим стенам и поистине дворцовому обслуживанию. Вечер окажется изысканным и церемонным. Подумайте, какое событие вы хотели бы отметить в этом зале. Юбилей? Встречу с друзьями? Успех? А может быть, свадьбу?</p>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+        </section>
+        <section id="portfolio">
+            <div class="container">
+                <div class="row portfolio-container">
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <a href="/img/restaurant/naph.jpg" data-lightbox="portfolio" data-title="Зал Наполеон - жемчужина ресторана. Столик на четверых. Сочетание пурпурных и белых тонов, роскошь, величие, неизменные гвардейцы. Этот зал достоин императора. Здесь мог бы произойти прием послов или военный совет. Вот уже собираются приближенные. Еще минута - и мы услышим быстрые шаги великого корсиканца! Это ли не поступь империи?! - 1993">
+                                    <img src="/img/restaurant/naph.jpg" class="img-fluid" alt="">
+                                </a>
+                            </figure>
+                            <div class="portfolio-info">
+                                <p>Зал Наполеон - жемчужина ресторана</p>
+                                <p>Столик на четверых</p>
+                                <p>1993 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <a href="/img/restaurant/zhozef.jpg" data-lightbox="about" data-title="Зал Жозефины на 6 человек - 1993 г.">
+                                    <img src="/img/restaurant/zhozef.jpg" class="img-fluid" alt="">
+                                </a>
+                            </figure>
+                            <div class="portfolio-info">
+                                <p>Зал Жозефины на 6 человек</p>
+                                <p>1993 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <a href="/img/restaurant/white.jpg" data-lightbox="about" data-title="Белым называется зал, рассчитанный на 10-15 человек. Ужиная здесь, вы будете пытаться соответствовать этим сверкающим стенам и поистине дворцовому обслуживанию. Вечер окажеться изысканным и церемонным. Подумайте, какое событие вы хотели бы отетить в этом зале. Юбилей? Встречу с друзьями? Успех? А может быть, свадьбу? - 1993 г.">
+                                    <img src="/img/restaurant/white.jpg" class="img-fluid" alt="">
+                                </a>
+                            </figure>
+                            <div class="portfolio-info">
+                                <p>Белым называется зал, рассчитанный на 10-15 человек ...</p>
+                                <p>1993 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <a href="/img/restaurant/1005.jpg" data-lightbox="about" data-title="Вестибюль - 1993 г.">
+                                    <img src="/img/restaurant/1005.jpg" class="img-fluid" alt="">
+                                </a>
+                            </figure>
+                            <div class="portfolio-info">
+                                <p>Вестибюль</p>
+                                <p>1993 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <a href="/img/restaurant/1006.jpg" data-lightbox="about" data-title="1993 г.">
+                                    <img src="/img/restaurant/1006.jpg" class="img-fluid" alt="">
+                                </a>
+                            </figure>
+                            <div class="portfolio-info">
+                                <p>1993 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <a href="/img/restaurant/1010.jpg" data-lightbox="about" data-title="Портрет Наполеона - автор Ашот Арутюнян 1993 г.">
+                                    <img src="/img/restaurant/1010.jpg" class="img-fluid" alt="">
+                                </a>
+                            </figure>
+                            <div class="portfolio-info">
+                                <p>Портрет Наполеона - автор Ашот Арутюнян</p>
+                                <p>Материал: масло, холст</p>
+                                <p>Размер: 110x220</p>
+                                <p>1993 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <a href="/img/restaurant/1007.jpg" data-lightbox="about" data-title="1993 г.">
+                                    <img src="/img/restaurant/1007.jpg" class="img-fluid" alt="">
+                                </a>
+                            </figure>
+                            <div class="portfolio-info">
+                                <p>1995 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <a href="/img/restaurant/1004.jpg" data-lightbox="about" data-title="Вход в ресторан с вестибюля - 1993 г.">
+                                    <img src="/img/restaurant/1004.jpg" class="img-fluid" alt="">
+                                </a>
+                            </figure>
+                            <div class="portfolio-info">
+                                <p>Вход в ресторан с вестибюля</p>
+                                <p>1993 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <a href="/img/restaurant/1020.jpg" data-lightbox="about" data-title="Летняя форма швейцаров - 1993 г.">
+                                    <img src="/img/restaurant/1020.jpg" class="img-fluid" alt="">
+                                </a>
+                            </figure>
+                            <div class="portfolio-info">
+                                <p>Летняя форма швейцаров</p>
+                                <p>1993 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <a href="/img/restaurant/1019.jpg" data-lightbox="about" data-title="Зимняя форма швейцаров - 1993 г.">
+                                    <img src="/img/restaurant/1019.jpg" class="img-fluid" alt="">
+                                </a>
+                            </figure>
+                            <div class="portfolio-info">
+                                <p>Зимняя форма швейцаров</p>
+                                <p>1993 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <a href="/img/restaurant/1018.jpg" data-lightbox="about" data-title="Зимняя форма швейцаров - 1993 г.">
+                                    <img src="/img/restaurant/1018.jpg" class="img-fluid" alt="">
+                                </a>
+                            </figure>
+                            <div class="portfolio-info">
+                                <p>Зимняя форма швейцаров</p>
+                                <p>1993 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <a href="/img/restaurant/1017.jpg" data-lightbox="about" data-title="Зимняя форма швейцаров - 1993 г.">
+                                    <img src="/img/restaurant/1017.jpg" class="img-fluid" alt="">
+                                </a>
+                            </figure>
+                            <div class="portfolio-info">
+                                <p>1993 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <a href="/img/restaurant/1016.jpg" data-lightbox="about" data-title="1993 г.">
+                                    <img src="/img/restaurant/1016.jpg" class="img-fluid" alt="">
+                                </a>
+                            </figure>
+                            <div class="portfolio-info">
+                                <p>1993 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <a href="/img/restaurant/1014.jpg" data-lightbox="about" data-title="1993 г.">
+                                    <img src="/img/restaurant/1014.jpg" class="img-fluid" alt="">
+                                </a>
+                            </figure>
+                            <div class="portfolio-info">
+                                <p>1993 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <a href="/img/restaurant/1013.jpg" data-lightbox="about" data-title="Летняя форма официантов - 1993 г.">
+                                    <img src="/img/restaurant/1013.jpg" class="img-fluid" alt="">
+                                </a>
+                            </figure>
+                            <div class="portfolio-info">
+                                <p>Летняя форма официантов</p>
+                                <p>1993 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <a href="/img/restaurant/1012.jpg" data-lightbox="about" data-title="Форма администратора - 1993 г.">
+                                    <img src="/img/restaurant/1012.jpg" class="img-fluid" alt="">
+                                </a>
+                            </figure>
+                            <div class="portfolio-info">
+                                <p>Форма администратора</p>
+                                <p>1993 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <a href="/img/restaurant/1011.jpg" data-lightbox="about" data-title="Форма метрдотеля - 1993 г.">
+                                    <img src="/img/restaurant/1011.jpg" class="img-fluid" alt="">
+                                </a>
+                            </figure>
+                            <div class="portfolio-info">
+                                <p>Форма метрдотеля</p>
+                                <p>1993 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <a href="/img/restaurant/1015.jpg" data-lightbox="about" data-title="Зимняя форма официантов - 1993 г.">
+                                    <img src="/img/restaurant/1015.jpg" class="img-fluid" alt="">
+                                </a>
+                            </figure>
+                            <div class="portfolio-info">
+                                <p>Зимняя форма официантов</p>
+                                <p>1993 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <a href="/img/restaurant/1027.jpg" data-lightbox="about" data-title="1993 г.">
+                                    <img src="/img/restaurant/1027.jpg" class="img-fluid" alt="">
+                                </a>
+                            </figure>
+                            <div class="portfolio-info">
+                                <p>1993 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <a href="/img/restaurant/1026.jpg" data-lightbox="about" data-title="1993 г.">
+                                    <img src="/img/restaurant/1026.jpg" class="img-fluid" alt="">
+                                </a>
+                            </figure>
+                            <div class="portfolio-info">
+                                <p>1993 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <a href="/img/restaurant/1025.jpg" data-lightbox="about" data-title="1993 г.">
+                                    <img src="/img/restaurant/1025.jpg" class="img-fluid" alt="">
+                                </a>
+                            </figure>
+                            <div class="portfolio-info">
+                                <p>1993 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <a href="/img/restaurant/1024.jpg" data-lightbox="about" data-title="Французские телячьи котлеты с грибами - 1993 г.">
+                                    <img src="/img/restaurant/1024.jpg" class="img-fluid" alt="">
+                                </a>
+                            </figure>
+                            <div class="portfolio-info">
+                                <p>Французские телячьи котлеты с грибами</p>
+                                <p>1993 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <a href="/img/restaurant/1023.jpg" data-lightbox="about" data-title="1993 г.">
+                                    <img src="/img/restaurant/1023.jpg" class="img-fluid" alt="">
+                                </a>
+                            </figure>
+                            <div class="portfolio-info">
+                                <p>1993 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="portfolio-wrap">
+                            <figure>
+                                <a href="/img/restaurant/1021.jpg" data-lightbox="about" data-title="Мясное ассорти стоило у нас в то время 14 $ - 1993 г.">
+                                    <img src="/img/restaurant/1021.jpg" class="img-fluid" alt="">
+                                </a>
+                            </figure>
+                            <div class="portfolio-info">
+                                <p>Мясное ассорти стоило у нас в то время 14 $</p>
+                                <p>1993 г.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

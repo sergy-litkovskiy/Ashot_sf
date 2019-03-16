@@ -149,7 +149,7 @@ h6 {
 }
 
 #header #logo h1 {
-  font-size: 30px;
+  font-size: 25px;
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -392,7 +392,6 @@ h6 {
 
 .nav-menu li:hover > a,
 .nav-menu > .menu-active > a {
-  /*color: #18d26e;*/
   color: #fff600;
 }
 
@@ -491,7 +490,6 @@ h6 {
 }
 
 #mobile-nav ul li a:hover {
-  /*color: #18d26e;*/
   color: #fff600;
 }
 
@@ -500,7 +498,6 @@ h6 {
 }
 
 #mobile-nav ul li.menu-active a {
-  /*color: #18d26e;*/
   color: #fff600;
 }
 
@@ -514,7 +511,6 @@ h6 {
 }
 
 #mobile-nav ul .menu-has-children i.fa-chevron-up {
-  /*color: #18d26e;*/
   color: #fff600;
 }
 
@@ -523,7 +519,6 @@ h6 {
 }
 
 #mobile-nav ul .menu-item-active {
-  /*color: #18d26e;*/
   color: #fff600;
 }
 
@@ -962,6 +957,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #portfolio .portfolio-wrap {
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
   transition: 0.3s;
+  text-align: center;
 }
 
 #portfolio .portfolio-wrap:hover {
@@ -1579,7 +1575,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 
   #header #logo h1 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   #header #logo {
@@ -1601,4 +1597,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   #mobile-nav-toggle {
     display: inline;
   }
+}
+
+.restaurant-interior-img img {
+  height: 200px;
 }

@@ -198,12 +198,12 @@ require('../css/style.css');
   });
 
   // Testimonials carousel (uses the Owl Carousel library)
-  $(".testimonials-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    items: 1
-  });
+  // $(".testimonials-carousel").owlCarousel({
+  //   autoplay: true,
+  //   dots: true,
+  //   loop: true,
+  //   items: 1
+  // });
 
   $(document).on('click', '.collapse-text-down', function(e) {
     $(this).parent().parent().find('#' + $(this).data('target-id')).show();

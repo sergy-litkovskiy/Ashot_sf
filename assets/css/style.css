@@ -972,12 +972,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #fff;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
+  width: 100px;
 }
 
 #portfolio #portfolio-flters li:hover,
 #portfolio #portfolio-flters li.filter-active {
-  background: #18d26e;
+  background: #620000;
   color: #fff;
+  border: 1px solid #fff;
 }
 
 #portfolio #portfolio-flters li:last-child {

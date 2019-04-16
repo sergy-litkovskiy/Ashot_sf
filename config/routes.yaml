@@ -17,3 +17,7 @@ restaurant:
 books:
     path: /books
     controller: App\Controller\BooksController::showAction
+
+gallery:
+    path: /gallery
+    controller: App\Controller\GalleryController::showAction

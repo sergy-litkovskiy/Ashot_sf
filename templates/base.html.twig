@@ -37,7 +37,7 @@
                     <nav id="nav-menu-container">
                         <ul class="nav-menu">
                             <li {% if currentPage == 'index' %}class="menu-active"{% endif %}><a href="{{ path('index') }}">Об авторе</a></li>
-                            <li {% if currentPage == 'gallery' %}class="menu-active"{% endif %}><a href="">Галлерея</a></li>
+                            <li {% if currentPage == 'gallery' %}class="menu-active"{% endif %}><a href="{{ path('gallery') }}">Галлерея</a></li>
                             <li {% if currentPage == 'technique' %}class="menu-active"{% endif %}><a href="{{ path('painting_technique') }}">Техника</a></li>
                             <li {% if currentPage == 'gift' %}class="menu-active"{% endif %}><a href="{{ path('elite_gift') }}">Элитный подарок</a></li>
                             <li {% if currentPage == 'restaurant' %}class="menu-active"{% endif %}><a href="{{ path('restaurant') }}">Ресторан Наполеон</a></li>

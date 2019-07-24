@@ -952,14 +952,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   /*padding: 60px 0;*/
 /*}*/
 
-#portfolio #portfolio-flters {
+#gallery #gallery-filters {
   padding: 0;
   margin: 5px 0 35px 0;
   list-style: none;
   text-align: center;
 }
 
-#portfolio #portfolio-flters li {
+#gallery #gallery-filters li {
   cursor: pointer;
   margin: 15px 15px 15px 0;
   display: inline-block;
@@ -975,34 +975,34 @@ body.mobile-nav-active #mobile-nav-toggle {
   width: 100px;
 }
 
-#portfolio #portfolio-flters li:hover,
-#portfolio #portfolio-flters li.filter-active {
+#gallery #gallery-filters li:hover,
+#gallery #gallery-filters li.filter-active {
   background: #620000;
   color: #fff;
   border: 1px solid #fff;
 }
 
-#portfolio #portfolio-flters li:last-child {
+#gallery #gallery-filters li:last-child {
   margin-right: 0;
 }
 
-#portfolio .portfolio-wrap {
+#gallery .gallery-wrap {
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
   transition: 0.3s;
   text-align: center;
 }
 
-#portfolio .portfolio-wrap:hover {
+#gallery .gallery-wrap:hover {
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.16);
 }
 
-#portfolio .portfolio-item {
+#gallery .gallery-item {
   position: relative;
   height: 360px;
   overflow: hidden;
 }
 
-#portfolio .portfolio-item figure {
+#gallery .gallery-item figure {
   background: #000;
   overflow: hidden;
   height: 240px;
@@ -1011,7 +1011,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin: 0;
 }
 
-#portfolio .portfolio-item figure:hover img {
+#gallery .gallery-item figure:hover img {
   opacity: 0.4;
   transition: 0.3s;
 }
@@ -1067,7 +1067,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   /*right: calc(50% - 44px);*/
 /*}*/
 
-#portfolio .portfolio-item .portfolio-info {
+#gallery .gallery-item .gallery-info {
   background: #fff;
   text-align: center;
   padding: 10px;
@@ -1091,7 +1091,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   /*color: #18d26e;*/
 /*}*/
 
-#portfolio .portfolio-item .portfolio-info p {
+#gallery .gallery-item .gallery-info p {
   padding: 0;
   margin: 0;
   font-weight: 500;

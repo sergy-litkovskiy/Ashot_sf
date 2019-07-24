@@ -176,13 +176,13 @@ require('../css/style.css');
   });
 
   // Porfolio isotope and filter
-  var portfolioIsotope = $('.portfolio-container').isotope({
-    itemSelector: '.portfolio-item',
+  var portfolioIsotope = $('.gallery-container').isotope({
+    itemSelector: '.gallery-item',
     layoutMode: 'fitRows'
   });
 
-  $('#portfolio-flters li').on( 'click', function() {
-    $("#portfolio-flters li").removeClass('filter-active');
+  $('#gallery-filters li').on( 'click', function() {
+    $("#gallery-filters li").removeClass('filter-active');
     $(this).addClass('filter-active');
 
     portfolioIsotope.isotope({ filter: $(this).data('filter') });

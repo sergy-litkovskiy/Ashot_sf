@@ -30,4 +30,12 @@ class CategoryService
     {
         return $this->repository->getCategoryById($categoryId);
     }
+
+    /**
+     * @return array
+     */
+    public function getCategoryList(): array
+    {
+        return $this->repository->getCategoryList();
+    }
 }

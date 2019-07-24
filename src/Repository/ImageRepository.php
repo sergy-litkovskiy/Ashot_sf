@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use Doctrine\DBAL\Driver\Statement;
+use Doctrine\DBAL\FetchMode;
 
 class ImageRepository extends AbstractRepository
 {
@@ -25,6 +26,6 @@ class ImageRepository extends AbstractRepository
         /** @var Statement $statement */
         $statement = $qb->execute();
 
-        return $statement->fetchAll(\Doctrine\DBAL\FetchMode::CUSTOM_OBJECT, 'App\Entity\Image');
+        return $statement->fetchAll(FetchMode::CUSTOM_OBJECT, 'App\Entity\Image');
     }
 }

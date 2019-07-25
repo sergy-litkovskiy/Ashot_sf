@@ -3,8 +3,8 @@
 namespace App\Controller;
 
 use App\Service\AboutLinksService;
-use App\Service\CategoryService;
-use App\Service\ImageService;
+use App\Service\GalleryCategoryService;
+use App\Service\GalleryImageService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -12,17 +12,17 @@ use Symfony\Component\HttpFoundation\Response;
 class IndexController extends AbstractController
 {
     /**
-     * @param Request           $request
-     * @param AboutLinksService $aboutLinksService
-     * @param CategoryService   $categoryService
-     * @param ImageService      $imageService
+     * @param Request                $request
+     * @param AboutLinksService      $aboutLinksService
+     * @param GalleryCategoryService $categoryService
+     * @param GalleryImageService    $imageService
      * @return Response
      */
     public function showAction(
         Request $request,
         AboutLinksService $aboutLinksService,
-        CategoryService $categoryService,
-        ImageService $imageService
+        GalleryCategoryService $categoryService,
+        GalleryImageService $imageService
     ): Response {
 //        $links = $aboutLinksService->getAboutLinks();
 //        $aboutAuthorCategory = $categoryService->getCategoryById(self::CATEGORY_ABOUT_AUTHOR_ID);

@@ -2,6 +2,11 @@
 
 {% block title "Gallery" %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('gallery') }}
+{% endblock %}
+
 {% block header %}
     {% set currentPage = 'gallery' %}
     {{ parent() }}
@@ -20,37 +25,41 @@
                         <ul id="gallery-filters">
                             {% for category in categoryList %}
                                 <li data-filter=".filter-{{ category.id }}" class="{% if loop.first %}filter-active{% endif %}">
-                                    {{ category.name }}
+                                    <a href="{{ path('gallery_by_category', {categorySlug: category.slug}) }}">{{ category.name }}</a>
                                 </li>
                             {% endfor %}
                         </ul>
                     </div>
                 </div>
-                <div class="row gallery-container">
+                <div class="row gallery-container" id="gallery-image-container">
                     {% for image in imageList %}
                         <div class="col-lg-4 col-md-6 gallery-item filter-{{ image.galleryCategoryId }} wow fadeInUp">
-                        <div class="gallery-wrap">
-                            <figure>
-                                <a href="/img/{{ image.path }}" data-lightbox="{{ image.galleryCategoryId }}" data-title="{{ image.name }} - {{ image.year }}">
-                                    <img src="/img/{{ image.path }}" class="img-fluid" alt="">
-                                </a>
-                            </figure>
-                            <div class="gallery-info">
-                                <p>{{ image.name }}</p>
-                                <p>
-                                    {% if image.material %}{{ image.material }}{% endif %}
-                                    {% if image.size %} | {{ image.size }}{% endif %}
-                                    {% if image.year %} | {{ image.year }} г.{% endif %}
-                                </p>
-                                {% if image.comment %}
-                                    <p>{{ image.comment }} г.</p>
-                                {% endif %}
+                            <div class="gallery-wrap">
+                                <figure>
+                                    <a href="/img/{{ image.path }}" data-lightbox="{{ image.galleryCategoryId }}" data-title="{{ image.name }} - {{ image.year }}">
+                                        <img src="/img/{{ image.path }}" class="img-fluid" alt="">
+                                    </a>
+                                </figure>
+                                <div class="gallery-info">
+                                    <p>{{ image.name }}</p>
+                                    <p>
+                                        {% if image.material %}{{ image.material }}{% endif %}
+                                        {% if image.size %} | {{ image.size }}{% endif %}
+                                        {% if image.year %} | {{ image.year }} г.{% endif %}
+                                    </p>
+                                    {% if image.comment %}
+                                        <p>{{ image.comment }} г.</p>
+                                    {% endif %}
+                                </div>
                             </div>
                         </div>
-                    </div>
                     {% endfor %}
                 </div>
             </div>
         </section>
     </main>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('gallery') }}
 {% endblock %}

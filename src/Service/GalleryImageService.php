@@ -34,6 +34,15 @@ class GalleryImageService
     }
 
     /**
+     * @param string $categorySlug
+     * @return array
+     */
+    public function getImageListByCategorySlug(string $categorySlug): array
+    {
+        return $this->repository->getImageListByCategorySlug($categorySlug);
+    }
+
+    /**
      * @return array
      */
     public function getImageList(): array

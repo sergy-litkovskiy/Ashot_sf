@@ -16,9 +16,9 @@ class GalleryCategory
     private $status;
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -92,9 +92,9 @@ class GalleryCategory
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getStatus(): int
+    public function getStatus(): ?int
     {
         return $this->status;
     }
@@ -103,7 +103,7 @@ class GalleryCategory
      * @param int $status
      * @return $this
      */
-    public function setTextLong(int $status): self
+    public function setStatus(int $status): self
     {
         $this->status = $status;
 

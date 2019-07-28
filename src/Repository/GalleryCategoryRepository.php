@@ -33,8 +33,26 @@ class GalleryCategoryRepository extends AbstractRepository
         return ArrayHelper::arrayGet($result, 0);
     }
 
+    public function getCategoryBySlug(string $categorySlug): ?GalleryCategory
+    {
+        $qb = $this->connection->createQueryBuilder();
+        $qb
+            ->select('id', 'name', 'slug', 'seq_number as seqNumber', 'status')
+            ->from('gallery_category')
+            ->where($qb->expr()->eq('slug', ':categorySlug'))
+            ->setParameter('categorySlug', $categorySlug)
+        ;
+
+        /** @var Statement $statement */
+        $statement = $qb->execute();
+
+        $result = $statement->fetchAll(FetchMode::CUSTOM_OBJECT, 'App\Entity\GalleryCategory');
+
+        return ArrayHelper::arrayGet($result, 0);
+    }
+
     /**
-     * @return array
+     * @return GalleryCategory[]
      */
     public function getCategoryList(): array
     {

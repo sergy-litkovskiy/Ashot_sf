@@ -30,7 +30,7 @@ class GalleryImage
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -66,9 +66,9 @@ class GalleryImage
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getSeqNumber(): int
+    public function getSeqNumber(): ?int
     {
         return $this->seqNumber;
     }
@@ -104,9 +104,9 @@ class GalleryImage
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getStatus(): int
+    public function getStatus(): ?int
     {
         return $this->status;
     }
@@ -123,9 +123,9 @@ class GalleryImage
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getPath(): string
+    public function getPath(): ?string
     {
         return $this->path;
     }

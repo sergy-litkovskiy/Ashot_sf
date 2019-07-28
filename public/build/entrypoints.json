@@ -1,5 +1,11 @@
 {
   "entrypoints": {
+    "gallery": {
+      "js": [
+        "/build/runtime.js",
+        "/build/gallery.js"
+      ]
+    },
     "app": {
       "js": [
         "/build/runtime.js",

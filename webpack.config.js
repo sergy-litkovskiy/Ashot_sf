@@ -17,8 +17,8 @@ Encore
      * Each entry will result in one JavaScript file (e.g. app.js)
      * and one CSS file (e.g. app.css) if you JavaScript imports CSS.
      */
+    .addEntry('gallery', './assets/js/gallery/gallery.js')
     .addEntry('app', './assets/js/main.js')
-    // .addEntry('lib', './assets/js/lib.js')
 
     // will require an extra script tag for runtime.js
     // but, you probably want this, unless you're building a single-page app

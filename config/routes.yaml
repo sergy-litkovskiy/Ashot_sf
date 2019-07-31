@@ -23,12 +23,12 @@ gallery:
     controller: App\Controller\GalleryController::showAction
 
 
-gallery_by_category:
-    path: /gallery/category/{categorySlug}
-    controller: App\Controller\GalleryController::galleryByCategoryAction
-
-#gallery-by-catgory:
-#    path: /gallery/category/{categoryId}
+#gallery_by_category:
+#    path: /gallery/category/{categorySlug}
 #    controller: App\Controller\GalleryController::galleryByCategoryAction
-#    options:
-#        expose: true
+
+gallery-by-catgory:
+    path: /gallery/category/{categoryId}
+    controller: App\Controller\GalleryController::galleryByCategoryAction
+    options:
+        expose: true

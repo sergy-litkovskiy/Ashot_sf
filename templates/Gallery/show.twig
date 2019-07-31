@@ -24,8 +24,8 @@
                     <div class="col-lg-12">
                         <ul id="gallery-filters">
                             {% for category in categoryList %}
-                                <li data-filter=".filter-{{ category.id }}" class="{% if loop.first %}filter-active{% endif %}">
-                                    <a href="{{ path('gallery_by_category', {categorySlug: category.slug}) }}">{{ category.name }}</a>
+                                <li data-filter=".filter-{{ category.id }}" data-cat-id="{{ category.id }}" class="{% if loop.first %}filter-active{% endif %}">
+                                    {{ category.name }}
                                 </li>
                             {% endfor %}
                         </ul>

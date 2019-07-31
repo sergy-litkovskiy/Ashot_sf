@@ -40,52 +40,18 @@ class GalleryController extends AbstractController
     }
 
     /**
-     * @param int                 $categoryId
+     * @param string                 $categoryId
      * @param GalleryImageService $galleryImageService
      * @return JsonResponse
      */
-//    public function galleryByCategoryAction(int $categoryId, GalleryImageService $galleryImageService): JsonResponse
-//    {
-//        if (!$categoryId) {
-//            return $this->json(['errors' => ['Category ID is required']], Response::HTTP_BAD_REQUEST);
-//        }
-//
-//        $imageList = $galleryImageService->getImageListByCategoryId($categoryId);
-//
-//        return $this->json(['data' => $imageList]);
-//    }
-
-    /**
-     * @param string                 $categorySlug
-     * @param GalleryCategoryService $categoryService
-     * @param GalleryImageService    $galleryImageService
-     * @return Response
-     */
-    public function galleryByCategoryAction(
-        string $categorySlug,
-        GalleryCategoryService $categoryService,
-        GalleryImageService $galleryImageService
-    ): Response {
-        if (!$categorySlug) {
-            return $this->json(['errors' => ['Category SLug is required']], Response::HTTP_BAD_REQUEST);
+    public function galleryByCategoryAction(string $categoryId, GalleryImageService $galleryImageService): JsonResponse
+    {
+        if (!$categoryId) {
+            return $this->json(['errors' => ['Category ID is required']], Response::HTTP_BAD_REQUEST);
         }
 
-        $categoryList = $categoryService->getCategoryList();
-        $imageList = [];
+        $imageList = $galleryImageService->getImageListByCategoryId((int) $categoryId);
 
-        foreach ($categoryList as $category) {
-            if ($category->getSlug() === $categorySlug) {
-                $imageList = $galleryImageService->getImageListByCategoryId($category->getId());
-                break;
-            }
-        }
-
-        return $this->render(
-            'Gallery/show.twig',
-            [
-                'categoryList' => $categoryList,
-                'imageList'    => $imageList ?? [],
-            ]
-        );
+        return $this->json(['data' => $imageList]);
     }
 }

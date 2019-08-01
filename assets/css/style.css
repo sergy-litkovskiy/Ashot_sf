@@ -972,7 +972,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #fff;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
-  width: 100px;
 }
 
 #gallery #gallery-filters li:hover,
@@ -1636,4 +1635,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: .875rem;
   line-height: 0.5;
   border-radius: .2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+#gallery-main-loader {
+  height: 50px;
 }

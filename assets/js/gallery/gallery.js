@@ -1,6 +1,8 @@
 (function ($) {
     "use strict";
 
+    const $galleryMainLoaderContainer = $('#gallery-main-loader');
+    const $galleryFilterContainer = $('#gallery-filters ');
     const $galleryContainer = $('#gallery-image-container');
     const $galleryImageContainer = $galleryContainer.isotope({
         itemSelector: '.gallery-item',
@@ -9,7 +11,17 @@
 
     let filterSet = [];
 
-    let _loadData = function (categoryId, filter) {
+    let _hideLoaders = function (element) {
+        $galleryMainLoaderContainer.addClass('hidden');
+        element.find('.gallery-filter-loader').addClass('hidden');
+    };
+
+    let _showLoaders = function (element) {
+        $galleryMainLoaderContainer.removeClass('hidden');
+        element.find('.gallery-filter-loader').removeClass('hidden');
+    };
+
+    let _loadData = function (categoryId, filter, $navContext) {
         $.ajax({
             'type': 'GET',
             'url' : '/gallery/category/' + categoryId
@@ -51,22 +63,28 @@
         })
         .error(function (response) {
 console.log('ERROR', response);
+        })
+        .complete(function () {
+            _hideLoaders($navContext);
         });
     };
 
-    $('#gallery-filters li').on('click', function () {
-        $('#gallery-filters li').removeClass('filter-active');
-        $(this).addClass('filter-active');
+    $galleryFilterContainer.find('li').on('click', function () {
+        const $item = $(this);
 
-        const categoryId = $(this).data('cat-id');
-        const filter = $(this).data('filter');
+        $galleryFilterContainer.find('li').removeClass('filter-active');
+        $item.addClass('filter-active');
 
-        // $galleryContainer.find('.gallery-item').hide();// todo: show loader
+        _showLoaders($item);
+
+        const categoryId = $item.data('cat-id');
+        const filter = $item.data('filter');
 
         if (!filterSet.includes(filter)) {
             filterSet.push(filter);
-            _loadData(categoryId, filter);
+            _loadData(categoryId, filter, $item);
         } else {
+            _hideLoaders($item);
             const elements = $galleryImageContainer.isotope('getFilteredItemElements');
 
             $galleryImageContainer

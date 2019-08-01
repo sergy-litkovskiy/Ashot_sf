@@ -1,6 +1,6 @@
-{% extends "base.html.twig" %}
+{% extends 'base.html.twig' %}
 
-{% block title "Gallery" %}
+{% block title 'Gallery' %}
 
 {% block stylesheets %}
     {{ parent() }}
@@ -25,10 +25,21 @@
                         <ul id="gallery-filters">
                             {% for category in categoryList %}
                                 <li data-filter=".filter-{{ category.id }}" data-cat-id="{{ category.id }}" class="{% if loop.first %}filter-active{% endif %}">
+                                    <span class="gallery-filter-loader hidden">
+                                        <span class="category-nav-loader">
+                                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                            <span class="sr-only">Loading...</span>
+                                        </span>
+                                    </span>
                                     {{ category.name }}
                                 </li>
                             {% endfor %}
                         </ul>
+                        <div id="gallery-main-loader" class="text-center text-light hidden">
+                            <div class="spinner-border" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="row gallery-container" id="gallery-image-container">

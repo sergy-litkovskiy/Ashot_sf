@@ -17,8 +17,31 @@ Encore
      * Each entry will result in one JavaScript file (e.g. app.js)
      * and one CSS file (e.g. app.css) if you JavaScript imports CSS.
      */
+    // Libs
+    .addEntry('jquery', './assets/js/lib/jquery/jquery.min.js')
+    .addEntry('jquery-migrate', './assets/js/lib/jquery/jquery-migrate.min.js')
+    .addEntry('bootstrap', './assets/js/lib/bootstrap/js/bootstrap.min.js')
+    .addEntry('bootstrap-bundle', './assets/js/lib/bootstrap/js/bootstrap.bundle.min.js')
+    .addEntry('easing', './assets/js/lib/easing/easing.min.js')
+    .addEntry('hoverIntent', './assets/js/lib/superfish/hoverIntent.js')
+    .addEntry('superfish', './assets/js/lib/superfish/superfish.min.js')
+    .addEntry('wow', './assets/js/lib/wow/wow.min.js')
+    .addEntry('waypoints', './assets/js/lib/waypoints/waypoints.min.js')
+    .addEntry('acounteruppp', './assets/js/lib/counterup/counterup.min.js')
+    .addEntry('isotope', './assets/js/lib/isotope/isotope.pkgd.min.js')
+    .addEntry('lightbox', './assets/js/lib/lightbox/js/lightbox.min.js')
+    .addEntry('touchSwipe', './assets/js/lib/touchSwipe/jquery.touchSwipe.min.js')
+
     .addEntry('gallery', './assets/js/gallery/gallery.js')
     .addEntry('app', './assets/js/main.js')
+
+    // Libs
+    .addStyleEntry('main-css', './assets/css/style.css')
+    .addStyleEntry('bootstrap-css', './assets/js/lib/bootstrap/css/bootstrap.min.css')
+    .addStyleEntry('font-awesome-css', './assets/js/lib/font-awesome/css/font-awesome.min.css')
+    .addStyleEntry('animate-css', './assets/js/lib/animate/animate.min.css')
+    .addStyleEntry('ionicons-css', './assets/js/lib/ionicons/css/ionicons.min.css')
+    .addStyleEntry('lightbox-css', './assets/js/lib/lightbox/css/lightbox.min.css')
 
     // will require an extra script tag for runtime.js
     // but, you probably want this, unless you're building a single-page app

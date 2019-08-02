@@ -35,15 +35,6 @@ class GalleryCategoryService
     }
 
     /**
-     * @param string $categorySlug
-     * @return GalleryCategory|null
-     */
-    public function getCategoryBySlug(string $categorySlug): ?GalleryCategory
-    {
-        return $this->repository->getCategoryBySlug($categorySlug);
-    }
-
-    /**
      * @return GalleryCategory[]
      */
     public function getCategoryList(): array

@@ -26,47 +26,47 @@
             'type': 'GET',
             'url' : '/gallery/category/' + categoryId
         })
-        .success(function (response) {
-            let $map = [];
-            response.data.map(function (image) {
-                const itemCategoryId = image.galleryCategoryId;
-                let description = '';
-                let item = '';
+            .success(function (response) {
+                let $map = [];
+                response.data.map(function (image) {
+                    const itemCategoryId = image.galleryCategoryId;
+                    let description = '';
+                    let item = '';
 
-                description += image.material ? image.material : '';
-                description += image.size ? ' | ' + image.size : '';
-                description += image.year ? ' | ' + image.year : '';
+                    description += image.material ? image.material : '';
+                    description += image.size ? ' | ' + image.size : '';
+                    description += image.year ? ' | ' + image.year : '';
 
-                item += '<div class="col-lg-4 col-md-6 gallery-item filter-' + itemCategoryId + ' wow fadeInUp">';
-                item += '<div class="gallery-wrap">';
-                item += '<figure>';
-                item += '<a href="/img/' + image.path + '" data-lightbox="' + itemCategoryId + '" data-title="' + image.name + ' - ' + image.year + '">';
-                item += '<img src="/img/' + image.path + '" class="img-fluid" alt="">';
-                item += '</a>';
-                item += '</figure>';
-                item += '<div class="gallery-info">';
-                item += '<p>' + image.name + '</p>';
-                item += '<p>' + description + '</p>';
-                item += '<p>' + image.comment ? image.comment : '' + 'г.</p>';
-                item += '</div>';
-                item += '</div>';
-                item += '</div>';
+                    item += '<div class="col-lg-4 col-md-6 gallery-item filter-' + itemCategoryId + ' wow fadeInUp">';
+                    item += '<div class="gallery-wrap">';
+                    item += '<figure>';
+                    item += '<a href="/img/' + image.path + '" data-lightbox="' + itemCategoryId + '" data-title="' + image.name + ' - ' + image.year + '">';
+                    item += '<img src="/img/' + image.path + '" class="img-fluid" alt="">';
+                    item += '</a>';
+                    item += '</figure>';
+                    item += '<div class="gallery-info">';
+                    item += '<p>' + image.name + '</p>';
+                    item += '<p>' + description + '</p>';
+                    item += '<p>' + image.comment ? image.comment : '' + 'г.</p>';
+                    item += '</div>';
+                    item += '</div>';
+                    item += '</div>';
 
-                $map.push($(item));
+                    $map.push($(item));
+                });
+
+                $galleryImageContainer
+                    .append($map)
+                    .isotope('insert', $map)
+                    .isotope('reloadItems');
+                $galleryImageContainer.isotope({filter: filter});
+            })
+            .error(function (response) {
+                console.log('ERROR', response);
+            })
+            .complete(function () {
+                _hideLoaders($navContext);
             });
-
-            $galleryImageContainer
-                .append($map)
-                .isotope('insert', $map)
-                .isotope('reloadItems');
-            $galleryImageContainer.isotope({filter: filter});
-        })
-        .error(function (response) {
-console.log('ERROR', response);
-        })
-        .complete(function () {
-            _hideLoaders($navContext);
-        });
     };
 
     $galleryFilterContainer.find('li').on('click', function () {

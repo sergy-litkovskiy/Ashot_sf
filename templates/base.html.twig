@@ -11,16 +11,13 @@
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
-        <link href="{{ asset('lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-
-        <link href="{{ asset('lib/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('lib/animate/animate.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('lib/ionicons/css/ionicons.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
-
         {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
+            {{ encore_entry_link_tags('main-css') }}
+            {{ encore_entry_link_tags('bootstrap-css') }}
+            {{ encore_entry_link_tags('font-awesome-css') }}
+            {{ encore_entry_link_tags('animate-css') }}
+            {{ encore_entry_link_tags('ionicons-css') }}
+            {{ encore_entry_link_tags('lightbox-css') }}
         {% endblock %}
         <title>
             {% block title %}Ashot{% endblock %}
@@ -93,20 +90,21 @@
             <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
         {% endblock %}
         {% block javascripts %}
-            <script src="{{ asset('lib/jquery/jquery.min.js') }}"></script>
-            <script src="{{ asset('lib/jquery/jquery-migrate.min.js') }}"></script>
-            <script src="{{ asset('lib/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-            <script src="{{ asset('lib/easing/easing.min.js') }}"></script>
-            <script src="{{ asset('lib/superfish/hoverIntent.js') }}"></script>
-            <script src="{{ asset('lib/superfish/superfish.min.js') }}"></script>
-            <script src="{{ asset('lib/wow/wow.min.js') }}"></script>
-            <script src="{{ asset('lib/waypoints/waypoints.min.js') }}"></script>
-            <script src="{{ asset('lib/counterup/counterup.min.js') }}"></script>
-            <script src="{{ asset('lib/owlcarousel/owl.carousel.min.js') }}"></script>
-            <script src="{{ asset('lib/isotope/isotope.pkgd.min.js') }}"></script>
-            <script src="{{ asset('lib/lightbox/js/lightbox.min.js') }}"></script>
-            <script src="{{ asset('lib/touchSwipe/jquery.touchSwipe.min.js') }}"></script>
-
+{#            {{ encore_entry_script_tags('jquery') }}#}
+{#            {{ encore_entry_script_tags('jquery-migrate') }}#}
+            <script src="/lib/jquery/jquery.min.js"></script>
+            <script src="/lib/jquery/jquery-migrate.min.js"></script>
+            {{ encore_entry_script_tags('bootstrap') }}
+            {{ encore_entry_script_tags('bootstrap-bundle') }}
+            {{ encore_entry_script_tags('easing') }}
+            {{ encore_entry_script_tags('hoverIntent') }}
+            {{ encore_entry_script_tags('superfish') }}
+            {{ encore_entry_script_tags('wow') }}
+            {{ encore_entry_script_tags('waypoints') }}
+            {{ encore_entry_script_tags('acounteruppp') }}
+            {{ encore_entry_script_tags('isotope') }}
+            {{ encore_entry_script_tags('lightbox') }}
+            {{ encore_entry_script_tags('touchSwipe') }}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </body>

@@ -5,7 +5,6 @@ namespace App\Repository;
 use App\Entity\GalleryCategory;
 use App\Helper\ArrayHelper;
 use App\Service\GalleryCategoryService;
-use App\Service\GalleryImageService;
 use Doctrine\DBAL\Driver\Statement;
 use Doctrine\DBAL\FetchMode;
 

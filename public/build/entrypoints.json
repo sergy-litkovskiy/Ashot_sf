@@ -1,5 +1,83 @@
 {
   "entrypoints": {
+    "isotope": {
+      "js": [
+        "/build/runtime.js",
+        "/build/isotope.js"
+      ]
+    },
+    "jquery": {
+      "js": [
+        "/build/runtime.js",
+        "/build/jquery.js"
+      ]
+    },
+    "bootstrap": {
+      "js": [
+        "/build/runtime.js",
+        "/build/bootstrap.js"
+      ]
+    },
+    "bootstrap-bundle": {
+      "js": [
+        "/build/runtime.js",
+        "/build/bootstrap-bundle.js"
+      ]
+    },
+    "easing": {
+      "js": [
+        "/build/runtime.js",
+        "/build/easing.js"
+      ]
+    },
+    "hoverIntent": {
+      "js": [
+        "/build/runtime.js",
+        "/build/hoverIntent.js"
+      ]
+    },
+    "superfish": {
+      "js": [
+        "/build/runtime.js",
+        "/build/superfish.js"
+      ]
+    },
+    "wow": {
+      "js": [
+        "/build/runtime.js",
+        "/build/wow.js"
+      ]
+    },
+    "waypoints": {
+      "js": [
+        "/build/runtime.js",
+        "/build/waypoints.js"
+      ]
+    },
+    "acounteruppp": {
+      "js": [
+        "/build/runtime.js",
+        "/build/acounteruppp.js"
+      ]
+    },
+    "jquery-migrate": {
+      "js": [
+        "/build/runtime.js",
+        "/build/jquery-migrate.js"
+      ]
+    },
+    "lightbox": {
+      "js": [
+        "/build/runtime.js",
+        "/build/lightbox.js"
+      ]
+    },
+    "touchSwipe": {
+      "js": [
+        "/build/runtime.js",
+        "/build/touchSwipe.js"
+      ]
+    },
     "gallery": {
       "js": [
         "/build/runtime.js",
@@ -10,9 +88,54 @@
       "js": [
         "/build/runtime.js",
         "/build/app.js"
+      ]
+    },
+    "main-css": {
+      "js": [
+        "/build/runtime.js"
       ],
       "css": [
-        "/build/app.css"
+        "/build/main-css.css"
+      ]
+    },
+    "bootstrap-css": {
+      "js": [
+        "/build/runtime.js"
+      ],
+      "css": [
+        "/build/bootstrap-css.css"
+      ]
+    },
+    "font-awesome-css": {
+      "js": [
+        "/build/runtime.js"
+      ],
+      "css": [
+        "/build/font-awesome-css.css"
+      ]
+    },
+    "animate-css": {
+      "js": [
+        "/build/runtime.js"
+      ],
+      "css": [
+        "/build/animate-css.css"
+      ]
+    },
+    "ionicons-css": {
+      "js": [
+        "/build/runtime.js"
+      ],
+      "css": [
+        "/build/ionicons-css.css"
+      ]
+    },
+    "lightbox-css": {
+      "js": [
+        "/build/runtime.js"
+      ],
+      "css": [
+        "/build/lightbox-css.css"
       ]
     }
   }

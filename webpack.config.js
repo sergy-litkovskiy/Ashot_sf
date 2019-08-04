@@ -18,22 +18,23 @@ Encore
      * and one CSS file (e.g. app.css) if you JavaScript imports CSS.
      */
     // Libs
-    .addEntry('jquery', './assets/js/lib/jquery/jquery.min.js')
-    .addEntry('jquery-migrate', './assets/js/lib/jquery/jquery-migrate.min.js')
-    .addEntry('bootstrap', './assets/js/lib/bootstrap/js/bootstrap.min.js')
-    .addEntry('bootstrap-bundle', './assets/js/lib/bootstrap/js/bootstrap.bundle.min.js')
-    .addEntry('easing', './assets/js/lib/easing/easing.min.js')
-    .addEntry('hoverIntent', './assets/js/lib/superfish/hoverIntent.js')
-    .addEntry('superfish', './assets/js/lib/superfish/superfish.min.js')
-    .addEntry('wow', './assets/js/lib/wow/wow.min.js')
-    .addEntry('waypoints', './assets/js/lib/waypoints/waypoints.min.js')
-    .addEntry('acounteruppp', './assets/js/lib/counterup/counterup.min.js')
-    .addEntry('isotope', './assets/js/lib/isotope/isotope.pkgd.min.js')
-    .addEntry('lightbox', './assets/js/lib/lightbox/js/lightbox.min.js')
-    .addEntry('touchSwipe', './assets/js/lib/touchSwipe/jquery.touchSwipe.min.js')
+    // .addEntry('jquery', './assets/js/lib/jquery/jquery.min.js')
+    // .addEntry('jquery-migrate', './assets/js/lib/jquery/jquery-migrate.min.js')
+    // .addEntry('bootstrap', './assets/js/lib/bootstrap/js/bootstrap.min.js')
+    // .addEntry('bootstrap-bundle', './assets/js/lib/bootstrap/js/bootstrap.bundle.min.js')
+    // .addEntry('easing', './assets/js/lib/easing/easing.min.js')
+    // .addEntry('hoverIntent', './assets/js/lib/superfish/hoverIntent.js')
+    // .addEntry('superfish', './assets/js/lib/superfish/superfish.min.js')
+    // .addEntry('wow', './assets/js/lib/wow/wow.min.js')
+    // .addEntry('waypoints', './assets/js/lib/waypoints/waypoints.min.js')
+    // .addEntry('acounteruppp', './assets/js/lib/counterup/counterup.min.js')
+    // .addEntry('isotope', './assets/js/lib/isotope/isotope.pkgd.min.js')
+    // .addEntry('lightbox', './assets/js/lib/lightbox/js/lightbox.min.js')
+    // .addEntry('touchSwipe', './assets/js/lib/touchSwipe/jquery.touchSwipe.min.js')
 
     .addEntry('gallery', './assets/js/gallery/gallery.js')
     .addEntry('app', './assets/js/main.js')
+    .addEntry('contact', './assets/js/contactform/contactform.js')
 
     // Libs
     .addStyleEntry('main-css', './assets/css/style.css')
@@ -67,7 +68,7 @@ Encore
     //.enableTypeScriptLoader()
 
     // uncomment if you're having problems with a jQuery plugin
-    //.autoProvidejQuery()
+    // .autoProvidejQuery()
 
     // uncomment if you use API Platform Admin (composer req api-admin)
     //.enableReactPreset()

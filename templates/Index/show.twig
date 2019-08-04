@@ -239,7 +239,7 @@
                         <div class="form">
                             <div id="sendmessage">Ваше сообщение отправлено. Спасибо!</div>
                             <div id="errormessage"></div>
-                            <form action="" method="post" role="form" class="contactForm">
+                            <form action="#" method="post" role="form" class="contactForm" data-path="{{ path('send_contact') }}">
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <input type="text" name="name" class="form-control" id="name" placeholder="Имя" data-rule="minlen:3" data-msg="Пожалуйста, введите не менее 3 символов" />
@@ -262,4 +262,9 @@
             </div>
         </section>
     </main>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('contact') }}
 {% endblock %}

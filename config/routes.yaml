@@ -22,13 +22,15 @@ gallery:
     path: /gallery
     controller: App\Controller\GalleryController::showAction
 
-
-#gallery_by_category:
-#    path: /gallery/category/{categorySlug}
-#    controller: App\Controller\GalleryController::galleryByCategoryAction
-
-gallery-by-catgory:
+gallery_by_catgory:
     path: /gallery/category/{categoryId}
     controller: App\Controller\GalleryController::galleryByCategoryAction
+    options:
+        expose: true
+
+send_contact:
+    path: /contact
+    controller: App\Controller\ContactController::sendContactAction
+    methods: POST
     options:
         expose: true

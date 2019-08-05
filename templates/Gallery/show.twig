@@ -47,8 +47,8 @@
                         <div class="col-lg-4 col-md-6 gallery-item filter-{{ image.galleryCategoryId }} wow fadeInUp">
                             <div class="gallery-wrap">
                                 <figure>
-                                    <a href="/img/{{ image.path }}" data-lightbox="{{ image.galleryCategoryId }}" data-title="{{ image.name }} - {{ image.year }}">
-                                        <img src="/img/{{ image.path }}" class="img-fluid" alt="">
+                                    <a href="{{ asset('img/')}}{{ image.path }}" data-lightbox="{{ image.galleryCategoryId }}" data-title="{{ image.name }} - {{ image.year }}">
+                                        <img src="{{ asset('img/')}}{{ image.path }}" class="img-fluid" alt="">
                                     </a>
                                 </figure>
                                 <div class="gallery-info">

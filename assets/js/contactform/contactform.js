@@ -98,10 +98,19 @@
         });
     };
 
-    let _showError = function (message) {
+    let _showError = function (responseText) {
         $('#sendmessage').removeClass('show');
         $('#errormessage').addClass('show');
-        $('#errormessage').html(message);
+
+        let text = '';
+        let response = JSON.parse(responseText);
+        let errors = response.errors;
+
+        for (let [key, value] of Object.entries(errors)) {
+            text += '<p>' + value + '</p>';
+        }
+
+        $('#errormessage').html(text);
     };
 
     let _hideError = function () {
@@ -135,12 +144,10 @@
             url    : action,
             data   : formData,
             success: function (result) {
-console.log('success - result', result);
                 _hideError();
             },
             error  : function (result) {
-console.log('error - result', result);
-                _showError();
+                _showError(result.responseText);
             }
         });
         return false;

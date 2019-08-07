@@ -8,6 +8,11 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+@import '../js/lib/bootstrap/css/bootstrap.min.css';
+@import '../js/lib/font-awesome/css/font-awesome.min.css';
+@import '../js/lib/ionicons/css/ionicons.min.css';
+@import '../js/lib/lightbox/css/lightbox.min.css';
+@import '../js/lib/animate/animate.min.css';
 
 body {
   background: url("../img/bg_main.png") top;

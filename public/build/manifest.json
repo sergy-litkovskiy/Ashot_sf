@@ -1,12 +1,7 @@
 {
-  "build/animate-css.css": "/build/animate-css.css",
   "build/app.js": "/build/app.js",
-  "build/bootstrap-css.css": "/build/bootstrap-css.css",
   "build/contact.js": "/build/contact.js",
-  "build/font-awesome-css.css": "/build/font-awesome-css.css",
   "build/gallery.js": "/build/gallery.js",
-  "build/ionicons-css.css": "/build/ionicons-css.css",
-  "build/lightbox-css.css": "/build/lightbox-css.css",
   "build/main-css.css": "/build/main-css.css",
   "build/runtime.js": "/build/runtime.js",
   "build/fonts/fontawesome-webfont.eot?v=4.7.0": "/build/fonts/fontawesome-webfont.674f50d2.eot",

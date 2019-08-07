@@ -32,17 +32,12 @@ Encore
     // .addEntry('lightbox', './assets/js/lib/lightbox/js/lightbox.min.js')
     // .addEntry('touchSwipe', './assets/js/lib/touchSwipe/jquery.touchSwipe.min.js')
 
-    .addEntry('gallery', './assets/js/gallery/gallery.js')
     .addEntry('app', './assets/js/main.js')
+    .addEntry('gallery', './assets/js/gallery/gallery.js')
     .addEntry('contact', './assets/js/contactform/contactform.js')
 
     // Libs
     .addStyleEntry('main-css', './assets/css/style.css')
-    .addStyleEntry('bootstrap-css', './assets/js/lib/bootstrap/css/bootstrap.min.css')
-    .addStyleEntry('font-awesome-css', './assets/js/lib/font-awesome/css/font-awesome.min.css')
-    .addStyleEntry('animate-css', './assets/js/lib/animate/animate.min.css')
-    .addStyleEntry('ionicons-css', './assets/js/lib/ionicons/css/ionicons.min.css')
-    .addStyleEntry('lightbox-css', './assets/js/lib/lightbox/css/lightbox.min.css')
 
     // will require an extra script tag for runtime.js
     // but, you probably want this, unless you're building a single-page app

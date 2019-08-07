@@ -1,15 +1,15 @@
 {
   "entrypoints": {
-    "gallery": {
-      "js": [
-        "/build/runtime.js",
-        "/build/gallery.js"
-      ]
-    },
     "app": {
       "js": [
         "/build/runtime.js",
         "/build/app.js"
+      ]
+    },
+    "gallery": {
+      "js": [
+        "/build/runtime.js",
+        "/build/gallery.js"
       ]
     },
     "contact": {
@@ -24,46 +24,6 @@
       ],
       "css": [
         "/build/main-css.css"
-      ]
-    },
-    "bootstrap-css": {
-      "js": [
-        "/build/runtime.js"
-      ],
-      "css": [
-        "/build/bootstrap-css.css"
-      ]
-    },
-    "font-awesome-css": {
-      "js": [
-        "/build/runtime.js"
-      ],
-      "css": [
-        "/build/font-awesome-css.css"
-      ]
-    },
-    "animate-css": {
-      "js": [
-        "/build/runtime.js"
-      ],
-      "css": [
-        "/build/animate-css.css"
-      ]
-    },
-    "ionicons-css": {
-      "js": [
-        "/build/runtime.js"
-      ],
-      "css": [
-        "/build/ionicons-css.css"
-      ]
-    },
-    "lightbox-css": {
-      "js": [
-        "/build/runtime.js"
-      ],
-      "css": [
-        "/build/lightbox-css.css"
       ]
     }
   }

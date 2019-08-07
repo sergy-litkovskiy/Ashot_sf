@@ -26,15 +26,6 @@ class GalleryCategoryService
     }
 
     /**
-     * @param int $categoryId
-     * @return GalleryCategory|null
-     */
-    public function getCategoryById(int $categoryId): ?GalleryCategory
-    {
-        return $this->repository->getCategoryById($categoryId);
-    }
-
-    /**
      * @return GalleryCategory[]
      */
     public function getCategoryList(): array

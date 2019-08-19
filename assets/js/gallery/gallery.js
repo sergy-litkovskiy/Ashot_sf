@@ -4,6 +4,7 @@
     const $galleryMainLoaderContainer = $('#gallery-main-loader');
     const $galleryFilterContainer = $('#gallery-filters ');
     const $galleryContainer = $('#gallery-image-container');
+
     const $galleryImageContainer = $galleryContainer.isotope({
         itemSelector: '.gallery-item',
         layoutMode  : 'fitRows'
@@ -23,10 +24,9 @@
 
     let _loadData = function (categoryId, filter, $navContext) {
         $.ajax({
-            'type': 'GET',
-            'url' : '/gallery/category/' + categoryId
-        })
-            .success(function (response) {
+            'type'  : 'GET',
+            'url'   : '/gallery/category/' + categoryId,
+            success : function (response) {
                 let $map = [];
                 response.data.map(function (image) {
                     const itemCategoryId = image.galleryCategoryId;
@@ -60,13 +60,14 @@
                     .isotope('insert', $map)
                     .isotope('reloadItems');
                 $galleryImageContainer.isotope({filter: filter});
-            })
-            .error(function (response) {
-                console.log('ERROR', response);
-            })
-            .complete(function () {
+            },
+            error   : function (response) {
+console.log('ERROR', response);
+            },
+            complete: function () {
                 _hideLoaders($navContext);
-            });
+            }
+        })
     };
 
     $galleryFilterContainer.find('li').on('click', function () {

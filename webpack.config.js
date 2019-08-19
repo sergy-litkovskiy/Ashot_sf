@@ -32,7 +32,7 @@ Encore
     // .addEntry('lightbox', './assets/js/lib/lightbox/js/lightbox.min.js')
     // .addEntry('touchSwipe', './assets/js/lib/touchSwipe/jquery.touchSwipe.min.js')
 
-    .addEntry('app', './assets/js/main.js')
+    .addEntry('app', './assets/js/app.js')
     .addEntry('gallery', './assets/js/gallery/gallery.js')
     .addEntry('contact', './assets/js/contactform/contactform.js')
 

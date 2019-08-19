@@ -1,3 +1,5 @@
+import WOW from './lib/wow/wow.min';
+
 (function ($) {
     "use strict";
 
@@ -24,7 +26,7 @@
     });
 
     // Initiate the wowjs animation library
-    new WOW().init();
+    const wow = new WOW().init();
 
     // Initiate superfish on nav menu
     $('.nav-menu').superfish({
@@ -115,17 +117,17 @@
     });
 
     // Porfolio isotope and filter
-    var portfolioIsotope = $('.gallery-container').isotope({
-        itemSelector: '.gallery-item',
-        layoutMode  : 'fitRows'
-    });
+    // var portfolioIsotope = $('.gallery-container').isotope({
+    //     itemSelector: '.gallery-item',
+    //     layoutMode  : 'fitRows'
+    // });
 
-    $('#gallery-filters li').on('click', function () {
-        $("#gallery-filters li").removeClass('filter-active');
-        $(this).addClass('filter-active');
-
-        portfolioIsotope.isotope({filter: $(this).data('filter')});
-    });
+    // $('#gallery-filters li').on('click', function () {
+    //     $("#gallery-filters li").removeClass('filter-active');
+    //     $(this).addClass('filter-active');
+    //
+    //     portfolioIsotope.isotope({filter: $(this).data('filter')});
+    // });
 
     $(document).on('click', '.collapse-text-down', function (e) {
         $(this).parent().parent().find('#' + $(this).data('target-id')).show();

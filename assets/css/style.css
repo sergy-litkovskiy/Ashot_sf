@@ -1034,3 +1034,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 #gallery-main-loader {
   height: 50px;
 }
+
+.ptn-img img {
+  width: 400px;
+  height: 565px;
+}

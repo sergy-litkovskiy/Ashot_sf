@@ -22,7 +22,7 @@ class StaticPageController extends AbstractController
      */
     public function showAction(string $slug): Response
     {
-        if (!\in_array($slug, self::SLUG_TO_ROUTE_MAP)) {
+        if (!ArrayHelper::arrayHas(self::SLUG_TO_ROUTE_MAP, $slug)) {
             throw $this->createNotFoundException();
         }
 

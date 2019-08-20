@@ -34,3 +34,7 @@ send_contact:
     methods: POST
     options:
         expose: true
+
+static_page:
+    path: /static/{slug}
+    controller: App\Controller\StaticPageController::showAction

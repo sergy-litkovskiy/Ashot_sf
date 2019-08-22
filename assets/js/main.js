@@ -28,24 +28,16 @@ import WOW from './lib/wow/wow.min';
     // Initiate the wowjs animation library
     const wow = new WOW().init();
 
-    // Initiate superfish on nav menu
-    $('.nav-menu').superfish({
-        animation: {
-            opacity: 'show'
-        },
-        speed    : 400
-    });
-
     // Mobile Navigation
     if ($('#nav-menu-container').length) {
-        var $mobile_nav = $('#nav-menu-container').clone().prop({
+        const $mobileNav = $('#nav-menu-container').clone().prop({
             id: 'mobile-nav'
         });
-        $mobile_nav.find('> ul').attr({
+        $mobileNav.find('> ul').attr({
             'class': '',
             'id'   : ''
         });
-        $('body').append($mobile_nav);
+        $('body').append($mobileNav);
         $('body').prepend('<button type="button" id="mobile-nav-toggle"><i class="fa fa-bars"></i></button>');
         $('body').append('<div id="mobile-body-overly"></div>');
         $('#mobile-nav').find('.menu-has-children').prepend('<i class="fa fa-chevron-down"></i>');
@@ -63,7 +55,7 @@ import WOW from './lib/wow/wow.min';
         });
 
         $(document).click(function (e) {
-            var container = $("#mobile-nav, #mobile-nav-toggle");
+            const container = $("#mobile-nav, #mobile-nav-toggle");
             if (!container.is(e.target) && container.has(e.target).length === 0) {
                 if ($('body').hasClass('mobile-nav-active')) {
                     $('body').removeClass('mobile-nav-active');
@@ -79,9 +71,9 @@ import WOW from './lib/wow/wow.min';
     // Smooth scroll for the menu and links with .scrollto classes
     $('.nav-menu a, #mobile-nav a, .scrollto').on('click', function () {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            var target = $(this.hash);
+            const target = $(this.hash);
             if (target.length) {
-                var top_space = 0;
+                let top_space = 0;
 
                 if ($('#header').length) {
                     top_space = $('#header').outerHeight();
@@ -109,25 +101,6 @@ import WOW from './lib/wow/wow.min';
             }
         }
     });
-
-    // jQuery counterUp (used in Facts section)
-    $('[data-toggle="counter-up"]').counterUp({
-        delay: 10,
-        time : 1000
-    });
-
-    // Porfolio isotope and filter
-    // var portfolioIsotope = $('.gallery-container').isotope({
-    //     itemSelector: '.gallery-item',
-    //     layoutMode  : 'fitRows'
-    // });
-
-    // $('#gallery-filters li').on('click', function () {
-    //     $("#gallery-filters li").removeClass('filter-active');
-    //     $(this).addClass('filter-active');
-    //
-    //     portfolioIsotope.isotope({filter: $(this).data('filter')});
-    // });
 
     $(document).on('click', '.collapse-text-down', function (e) {
         $(this).parent().parent().find('#' + $(this).data('target-id')).show();

@@ -10,7 +10,7 @@ class StaticPageController extends AbstractController
 {
     private const SLUG_TO_ROUTE_MAP = [
         'ptn'                  => 'Static/ptn_pnx.twig',
-        'svet-i-tma'           => 'Static/sevt_i_tma.twig',
+        'svet-i-tma'           => 'Static/svet_i_tma.twig',
         'lost-kiev'            => 'Static/lost_kiev.twig',
         'kiev-vchera-segodnya' => 'Static/kiev_vchera_segodnya.twig',
         'nostalgy'             => 'Static/nostalgy.twig',

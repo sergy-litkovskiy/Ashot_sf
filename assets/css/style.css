@@ -52,27 +52,27 @@ h6 {
 
 /* Back to top button */
 
-.back-to-top {
-  position: fixed;
-  display: none;
-  background: #620000;
-  color: #fff;
-  width: 44px;
-  height: 44px;
-  text-align: center;
-  line-height: 1;
-  font-size: 16px;
-  border-radius: 50%;
-  right: 15px;
-  bottom: 15px;
-  transition: background 0.5s;
-  z-index: 11;
-}
+/*.back-to-top {*/
+/*  position: fixed;*/
+/*  display: none;*/
+/*  background: #620000;*/
+/*  color: #fff;*/
+/*  width: 44px;*/
+/*  height: 44px;*/
+/*  text-align: center;*/
+/*  line-height: 1;*/
+/*  font-size: 16px;*/
+/*  border-radius: 50%;*/
+/*  right: 15px;*/
+/*  bottom: 15px;*/
+/*  transition: background 0.5s;*/
+/*  z-index: 11;*/
+/*}*/
 
-.back-to-top i {
-  padding-top: 12px;
-  color: #fff;
-}
+/*.back-to-top i {*/
+/*  padding-top: 12px;*/
+/*  color: #fff;*/
+/*}*/
 
 /* Prelaoder */
 
@@ -999,9 +999,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 @media (max-width: 768px) {
-  .back-to-top {
-    bottom: 15px;
-  }
+  /*.back-to-top {*/
+  /*  bottom: 15px;*/
+  /*}*/
 
   #header #logo h1 {
     font-size: 18px;
@@ -1033,4 +1033,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #gallery-main-loader {
   height: 50px;
+}
+
+/**** Isotope filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
 }

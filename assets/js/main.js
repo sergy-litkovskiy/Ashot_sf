@@ -12,21 +12,8 @@ import WOW from './lib/wow/wow.min';
         }
     });
 
-    // Back to top button
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $('.back-to-top').fadeIn('slow');
-        } else {
-            $('.back-to-top').fadeOut('slow');
-        }
-    });
-    $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
-        return false;
-    });
-
     // Initiate the wowjs animation library
-    const wow = new WOW().init();
+    new WOW().init();
 
     // Mobile Navigation
     if ($('#nav-menu-container').length) {
@@ -71,7 +58,7 @@ import WOW from './lib/wow/wow.min';
     // Smooth scroll for the menu and links with .scrollto classes
     $('.nav-menu a, #mobile-nav a, .scrollto').on('click', function () {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            const target = $(this.hash);
+            let target = $(this.hash);
             if (target.length) {
                 let top_space = 0;
 

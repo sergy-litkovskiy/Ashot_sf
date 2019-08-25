@@ -1,4 +1,5 @@
-var Encore = require('@symfony/webpack-encore');
+let Encore = require('@symfony/webpack-encore');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 Encore
     // directory where compiled assets will be stored
@@ -18,20 +19,6 @@ Encore
      * and one CSS file (e.g. app.css) if you JavaScript imports CSS.
      */
     // Libs
-    // .addEntry('jquery', './assets/js/lib/jquery/jquery.min.js')
-    // .addEntry('jquery-migrate', './assets/js/lib/jquery/jquery-migrate.min.js')
-    // .addEntry('bootstrap', './assets/js/lib/bootstrap/js/bootstrap.min.js')
-    // .addEntry('bootstrap-bundle', './assets/js/lib/bootstrap/js/bootstrap.bundle.min.js')
-    // .addEntry('easing', './assets/js/lib/easing/easing.min.js')
-    // .addEntry('hoverIntent', './assets/js/lib/superfish/hoverIntent.js')
-    // .addEntry('superfish', './assets/js/lib/superfish/superfish.min.js')
-    // .addEntry('wow', './assets/js/lib/wow/wow.min.js')
-    // .addEntry('waypoints', './assets/js/lib/waypoints/waypoints.min.js')
-    // .addEntry('acounteruppp', './assets/js/lib/counterup/counterup.min.js')
-    // .addEntry('isotope', './assets/js/lib/isotope/isotope.pkgd.min.js')
-    // .addEntry('lightbox', './assets/js/lib/lightbox/js/lightbox.min.js')
-    // .addEntry('touchSwipe', './assets/js/lib/touchSwipe/jquery.touchSwipe.min.js')
-
     .addEntry('app', './assets/js/app.js')
     .addEntry('gallery', './assets/js/gallery/gallery.js')
     .addEntry('contact', './assets/js/contactform/contactform.js')
@@ -54,7 +41,7 @@ Encore
     .enableBuildNotifications()
     .enableSourceMaps(!Encore.isProduction())
     // enables hashed filenames (e.g. app.abc123.css)
-    .enableVersioning(Encore.isProduction())
+    // .enableVersioning(Encore.isProduction())
 
     // enables Sass/SCSS support
     //.enableSassLoader()
@@ -69,5 +56,21 @@ Encore
     //.enableReactPreset()
     //.addEntry('admin', './assets/js/admin.js')
 ;
+
+if (Encore.isProduction()) {
+    Encore
+        // @see: https://github.com/NMFR/optimize-css-assets-webpack-plugin
+        .addPlugin(new OptimizeCssAssetsPlugin({
+            assetNameRegExp: /\.(c|s[ac])ss$/,
+            cssProcessorPluginOptions: {
+                preset: ['default', {
+                    discardComments: {
+                        removeAll: false
+                    }
+                }],
+            },
+            canPrint: true,
+        }));
+}
 
 module.exports = Encore.getWebpackConfig();

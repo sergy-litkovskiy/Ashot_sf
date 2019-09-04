@@ -46,15 +46,15 @@ services:
       PHP_XDEBUG_ENABLED: 1
       XDEBUG_CONFIG: remote_host=docker.for.mac.host.internal
 
-  angular-app:
-    build: ./docker/angular-app
-    container_name: sf4_angular_app
-    volumes:
-      - ./:/application
-    working_dir: /application/public/angular-app/
-    entrypoint: ash -c 'npm install && npm run build-dev && npm run dev'
-    ports:
-      - "8080:8080"
-    networks:
-      app_nw:
-        ipv4_address: 172.21.0.9
+#  angular-app:
+#    build: ./docker/angular-app
+#    container_name: sf4_angular_app
+#    volumes:
+#      - ./:/application
+#    working_dir: /application/public/angular-app/
+#    entrypoint: ash -c 'npm install && npm run build-dev && npm run dev'
+#    ports:
+#      - "8080:8080"
+#    networks:
+#      app_nw:
+#        ipv4_address: 172.21.0.9

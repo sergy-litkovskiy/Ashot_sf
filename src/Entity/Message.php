@@ -12,9 +12,9 @@ class Message
     /** @var int */
     private $id;
     /** @var string */
-    private $senderName;
+    private $name;
     /** @var string */
-    private $senderEmail;
+    private $email;
     /** @var string */
     private $text;
     /** @var DateTime */
@@ -22,13 +22,13 @@ class Message
 
     public static function loadValidatorMetadata(ClassMetadata $metadata)
     {
-        $metadata->addPropertyConstraint('senderName', new NotBlank([
+        $metadata->addPropertyConstraint('name', new NotBlank([
             'message' => 'Поле "Имя" является обязательным',
         ]));
-        $metadata->addPropertyConstraint('senderEmail', new NotBlank([
+        $metadata->addPropertyConstraint('email', new NotBlank([
             'message' => 'Поле "Email" является обязательным',
         ]));
-        $metadata->addPropertyConstraint('senderEmail', new Email([
+        $metadata->addPropertyConstraint('email', new Email([
             'message' => 'Email {{ value }} имеет неверный формат',
             'checkMX' => true,
         ]));
@@ -59,18 +59,18 @@ class Message
     /**
      * @return string|null
      */
-    public function getSenderName(): ?string
+    public function getName(): ?string
     {
-        return $this->senderName;
+        return $this->name;
     }
 
     /**
-     * @param string $senderName
+     * @param string|null $name
      * @return $this
      */
-    public function setSenderName(string $senderName): self
+    public function setName(?string $name): self
     {
-        $this->senderName = $senderName;
+        $this->name = $name;
 
         return $this;
     }
@@ -78,18 +78,18 @@ class Message
     /**
      * @return string|null
      */
-    public function getSenderEmail(): ?string
+    public function getEmail(): ?string
     {
-        return $this->senderEmail;
+        return $this->email;
     }
 
     /**
-     * @param string $senderEmail
+     * @param string|null $email
      * @return $this
      */
-    public function setSenderEmail(string $senderEmail): self
+    public function setEmail(?string $email): self
     {
-        $this->senderEmail = $senderEmail;
+        $this->email = $email;
 
         return $this;
     }
@@ -103,12 +103,12 @@ class Message
     }
 
     /**
-     * @param string $text
+     * @param string|null $message
      * @return $this
      */
-    public function setText(string $text): self
+    public function setText(?string $message): self
     {
-        $this->text = $text;
+        $this->text = $message;
 
         return $this;
     }

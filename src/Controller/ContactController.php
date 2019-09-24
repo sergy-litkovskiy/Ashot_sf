@@ -1,41 +1,37 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Controller;
 
-use App\Entity\Message;
+use App\Service\MessageService;
+use Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 class ContactController extends AbstractController
 {
     /**
-     * @param Request            $request
-     * @param ValidatorInterface $validator
+     * @param Request        $request
+     * @param MessageService $messageService
      * @return JsonResponse
      */
-    public function sendContactAction(Request $request, ValidatorInterface $validator): JsonResponse
-    {
-        $name = $request->get('name');
-        $email = $request->get('email');
-        $text = $request->get('message');
+    public function sendContactAction(
+        Request $request,
+        MessageService $messageService
+    ): JsonResponse {
+        try {
+            $data = [
+                'name'    => $request->get('name'),
+                'email'   => $request->get('email'),
+                'text' => $request->get('message'),
+            ];
 
-        $message = new Message();
-        $message->setSenderName($name);
-        $message->setSenderEmail($email);
-        $message->setText($text);
-
-        $errors = $validator->validate($message);
-
-        if ($errors->count()) {
-            $errorMessage = [];
-            foreach ($errors as $error) {
-                $errorMessage[$error->getPropertyPath()] = $error->getMessage();
-            }
-
-            return $this->json(['errors' => $errorMessage], Response::HTTP_BAD_REQUEST);
+            $messageService->saveMessage($data);
+        } catch (Exception $e) {
+            return $this->json(['errors' => \explode(',', $e->getMessage())], Response::HTTP_BAD_REQUEST);
         }
 
         return $this->json(['data' => []]);

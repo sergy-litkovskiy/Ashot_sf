@@ -842,7 +842,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   letter-spacing: 3px;
-  border-left: 4px solid #18d26e;
+  border-left: 4px solid #fff600;
 }
 
 #footer .footer-top .footer-info p {
@@ -897,7 +897,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top h4::after {
-  background: #18d26e;
+  background: #fff600;
   width: 60px;
 }
 

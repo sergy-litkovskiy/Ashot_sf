@@ -1,8 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Entity;
 
-use Symfony\Component\Validator\Constraints\DateTime;
+use DateTime;
 use Symfony\Component\Validator\Constraints\Email;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Mapping\ClassMetadata;
@@ -20,7 +22,10 @@ class Message
     /** @var DateTime */
     private $createdAt;
 
-    public static function loadValidatorMetadata(ClassMetadata $metadata)
+    /**
+     * @param ClassMetadata $metadata
+     */
+    public static function loadValidatorMetadata(ClassMetadata $metadata): void
     {
         $metadata->addPropertyConstraint('name', new NotBlank([
             'message' => 'Поле "Имя" является обязательным',

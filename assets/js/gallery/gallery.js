@@ -32,7 +32,7 @@
 
             description += image.material ? image.material : '';
             description += image.size ? ' | ' + image.size : '';
-            description += image.year ? ' | ' + image.year : '';
+            description += image.year ? ' | ' + image.year + ' г.' : '';
 
             item += '<div class="col-lg-4 col-md-6 gallery-item filter-' + itemCategoryId + ' wow fadeInUp">';
             item += '<div class="gallery-wrap">';
@@ -44,7 +44,9 @@
             item += '<div class="gallery-info">';
             item += '<p>' + image.name + '</p>';
             item += '<p>' + description + '</p>';
-            item += '<p>' + image.comment ? image.comment : '' + 'г.</p>';
+            item += '<p>';
+            item += image.comment ? image.comment : '';
+            item += '</p>';
             item += '</div>';
             item += '</div>';
             item += '</div>';

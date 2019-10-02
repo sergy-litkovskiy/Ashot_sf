@@ -25,7 +25,7 @@ class MessageRepository extends AbstractRepository
             ->setParameter(':name', $message->getName())
             ->setParameter(':email', $message->getEmail())
             ->setParameter(':text', $message->getText())
-            ->setParameter(':createdAt', $message->getCreatedAt())
+            ->setParameter(':createdAt', $message->getCreatedAt()->format('Y-m-d H:i:s'))
         ;
 
         $qb->execute();

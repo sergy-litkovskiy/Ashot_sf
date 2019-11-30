@@ -17,7 +17,7 @@ class IndexController extends AbstractController
     public function indexAction(Request $request, AboutService $aboutService): Response
     {
         $links = $aboutService->getAboutData();
-var_dump($links);die();
+
         return $this->render('Index/index.twig', ['data' => ['about' => 'about person text']]);
     }
 }
